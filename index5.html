@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" id="text1" value="text1" /><br />
+    <input type="text" id="text2" value="text2" disabled /> <br />
+    <input type="text" id="text3" value="text3" /> <br />
+    <input type="text" id="text4" value="text4" disabled /> <br />
+    <br />
+    <input type="checkbox" name="" id="" value="建设" /><br />
+    <input type="checkbox" name="" id="" value="游泳" checked /><br />
+    <input type="checkbox" name="" id="" value="游戏" checked /><br />
+    <br />
+
+    <p>下拉框</p>
+    <select name="" id="lang">
+      <option value="java">java</option>
+      <option value="go">go</option>
+      <option value="sql">sql</option>
+    </select>
+    <br />
+    <button id="btn1">dainji1</button>
+    <button id="btn2">dainji2</button>
+    <button id="btn3">dainji3</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(function () {
+      $("#btn1").click(() => {
+        var obj = $(":text:enabled");
+        for (const iterator of obj) {
+          $(iterator).val("hello");
+        }
+      });
+    });
+    $(function () {
+      $("#btn2").click(() => {
+        var obj = $(":checkbox:checked");
+        for (const iterator of obj) {
+          console.log(iterator.value);
+        }
+      });
+    });
+
+    $(function () {
+      $("#btn3").click(() => {
+        var obj = $("select>option:selected");
+        console.log(obj[0].value);
+      });
+    });
+  </script>
+
+  <style></style>
+</html>

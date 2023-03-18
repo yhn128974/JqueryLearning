@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <select name="" id="">
+      <option value="老虎">老虎</option>
+      <option value="师子">师子</option>
+      <option value="海豹">海豹</option>
+    </select>
+    <br />
+
+    <select name="" id="">
+      <option value="亚洲">亚洲</option>
+      <option value="欧洲">欧洲</option>
+      <option value="每周">每周</option>
+    </select>
+
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+    <button id="btn3">3</button>
+    <button id="btn4">4</button>
+    <button id="btn5">5</button>
+    <button id="btn6">6</button>
+
+    <div id="father">I am first div</div>
+    <span> <b>there is span content</b></span
+    ><br />
+    <span> <b>there is span content</b></span>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(function () {
+      $("#btn1").click(() => {
+        $("select").remove();
+      });
+
+      $("#btn2").click(() => {
+        $("select").empty();
+      });
+
+      $("#btn3").click(() => {
+        // append添加属性
+        $("#father").append("<button>I am a new button</button>");
+      });
+
+      $("#btn4").click(() => {
+        // append添加属性
+        let content1 = $("span").html();
+        let content2 = $("span").text();
+        console.log(content1, content2);
+      });
+
+      $("#btn5").click(() => {
+        // append添加属性
+        let content1 = $("span").html();
+        let content2 = $("span").text();
+        console.log(content1, content2);
+      });
+
+      $("#btn5").click(() => {
+        // append添加属性
+        $("span").html("<b> this is new span content</b>");
+      });
+    });
+  </script>
+
+  <style></style>
+</html>

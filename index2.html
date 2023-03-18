@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" />
+    <br />
+    <input type="password" />
+    <br />
+    <input type="radio" name="sex" value="boy" />
+    <input type="radio" name="sex" value="girl" />
+    <br />
+    <input type="button" />
+    <br />
+    <input type="checkbox" name=" " id="" value="bick" />
+    <input type="checkbox" name="" id="" value="apple" />
+    <input type="checkbox" name="" id="" value="pen" />
+
+    <br />
+    <input type="file" name="" id="" />
+    <br />
+    <input type="submit" value="" />
+    <br />
+    <input type="reset" value="" />
+    <br />
+    <button onclick="clickbtn()">点击获取</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    function clickbtn() {
+      for (const iterator of $(":checkbox")) {
+        console.log($(iterator).val());
+      }
+    }
+  </script>
+
+  <style></style>
+</html>

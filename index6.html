@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" id="text1" value="text1" /><br />
+    <input type="text" id="text2" value="text2" /> <br />
+    <input type="text" id="text3" value="text3" /> <br />
+
+    <p>文本数据</p>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+
+    <p>image</p>
+    <img src="./Screenshot 2023-03-17 084154.png" alt="" />
+    <p>button</p>
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+    <button id="btn3">3</button>
+    <button id="btn4">4</button>
+    <button id="btn5">5</button>
+    <button id="btn6">6</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(function () {
+      $("#btn1").click(() => {
+        var obj = $(":text");
+        // obj.val()获取jdom数组的第一个属性的值
+        console.log(obj.val());
+
+        // for (const iterator of obj) {
+
+        // }
+      });
+    });
+
+    $(function () {
+      $("#btn2").click(() => {
+        var obj = $(":text:enabled");
+        // val可以给整个jdom数组赋值
+        obj.val("三国演义");
+      });
+    });
+
+    $(function () {
+      $("#btn3").click(() => {
+        var obj = $("div");
+        // text()无参数时候可以获取所有dom对象的文本值，链接成一个字符串对象
+        console.log(obj.text());
+
+        console.log(obj.attr());
+      });
+    });
+
+    $(function () {
+      $("#btn4").click(() => {
+        var obj = $("div");
+        // text("value") 设置元素内部的值
+        obj.text("this is new text");
+      });
+    });
+
+    $(function () {
+      $("#btn5").click(() => {
+        var obj = $("img");
+        // attr获取对应的属性的值
+        console.log(obj.attr("src"));
+      });
+    });
+
+    $(function () {
+      $("#btn6").click(() => {
+        var obj = $("img");
+        // attr设置对应的属性的值、
+        obj.attr("src", "./Screenshot 2023-03-17 090320.png");
+      });
+    });
+  </script>
+
+  <style></style>
+</html>

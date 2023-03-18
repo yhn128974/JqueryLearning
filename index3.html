@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" />
+    <br />
+    <input type="password" />
+    <br />
+    <input type="radio" name="sex" value="boy" />
+    <input type="radio" name="sex" value="girl" />
+    <br />
+    <input type="button" />
+    <br />
+    <input type="checkbox" name=" " id="" value="bick00" />
+    <input type="checkbox" name=" " id="" value="bick01" />
+    <input type="checkbox" name="" id="" value="apple" />
+    <input type="checkbox" name="" id="" value="pen" />
+    <input type="checkbox" name="" id="" value="tree" />
+    <input type="checkbox" name="" id="" value="tree2" />
+
+    <br />
+    <input type="file" name="" id="" />
+    <br />
+    <input type="submit" value="" />
+    <br />
+    <input type="reset" value="" />
+    <br />
+    <button onclick="clickbtn()">点击获取</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    // 过滤器
+    function clickbtn() {
+      console.log($(":checkbox:first").val());
+      console.log($(":checkbox:last").val());
+      // 等于下标
+      console.log($(":checkbox:eq(2)").val());
+      // 小于小标所有元素
+
+      for (const iterator of $(":checkbox:lt(2)")) {
+        console.log(iterator.value);
+      }
+
+      // 大于下标所有元素
+      console.log($(":checkbox:gt(2)"));
+    }
+  </script>
+
+  <style></style>
+</html>

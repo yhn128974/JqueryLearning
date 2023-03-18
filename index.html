@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div type="text" name="" id="text2">tex2</div>
+    <div type="text" name="" class="text3">text3</div>
+    <input type="text" name="" id="text1" />
+    <div>
+      <button onclick="fun1()">点击显示一</button>
+      <button onclick="fun2()">点击显示二</button>
+    </div>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    // $(document).ready(function(){
+    //     alert('hello jquery')
+    // })
+
+    // $(function () {
+    //   alert("232323");
+    // });
+
+    function fun1() {
+      let obj = $("#text1");
+      //   console.log(obj.val());
+      //   obj.get(0)===obj[0]===
+      console.log(obj.get(0).value);
+    }
+
+    function fun2() {
+      // 混合选择器
+      let obj = $("#text2,.text3");
+      obj.css("background", "red");
+    }
+  </script>
+  <style>
+    #text2 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+    .text3 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+</html>
